@@ -10,3 +10,18 @@
 .login-landscape {
   pointer-events: none;
 }
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-12px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideInFromLeft 220ms ease-out both;
+}

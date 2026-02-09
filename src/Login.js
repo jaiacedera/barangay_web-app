@@ -35,7 +35,7 @@ function Login({ onNavigate, page }) {
 
         <nav className="flex items-center gap-3">
           <div
-            className={`group rounded-3xl shadow-md border border-[#274C77] overflow-hidden min-w-[92px] sm:min-w-[140px] h-10 sm:h-11 transition hover:bg-[#274C77]/50 ${page === "login" ? "bg-[#274C77]/50" : "bg-white"}`}
+            className={`group rounded-3xl shadow-md border border-[#274C77] overflow-hidden min-w-[92px] sm:min-w-[140px] h-10 sm:h-11 transition hover:bg-[#274C77] ${page === "login" ? "bg-[#274C77]" : "bg-white"}`}
           >
             <button
               type="button"
@@ -50,7 +50,7 @@ function Login({ onNavigate, page }) {
           </div>
 
           <div
-            className={`group rounded-3xl shadow-md border border-[#274C77] overflow-hidden min-w-[92px] sm:min-w-[140px] h-10 sm:h-11 transition hover:bg-[#274C77]/50 ${page === "signup" ? "bg-[#274C77]/50" : "bg-white"}`}
+            className={`group rounded-3xl shadow-md border border-[#274C77] overflow-hidden min-w-[92px] sm:min-w-[140px] h-10 sm:h-11 transition hover:bg-[#274C77] ${page === "signup" ? "bg-[#274C77]" : "bg-white"}`}
           >
             <button
               type="button"
@@ -65,7 +65,7 @@ function Login({ onNavigate, page }) {
           </div>
 
           <div
-            className={`group rounded-3xl shadow-md border border-[#274C77] overflow-hidden min-w-[72px] sm:min-w-[110px] h-10 sm:h-11 transition hover:bg-[#274C77]/50 bg-white`}
+            className={`group rounded-3xl shadow-md border border-[#274C77] overflow-hidden min-w-[72px] sm:min-w-[110px] h-10 sm:h-11 transition hover:bg-[#274C77] bg-white`}
           >
             <a
               href="#about"
@@ -89,7 +89,13 @@ function Login({ onNavigate, page }) {
             </span>
           </div>
 
-          <form className="space-y-3">
+          <form
+            className="space-y-3"
+            onSubmit={(e) => {
+              e.preventDefault();
+              onNavigate?.("dashboard");
+            }}
+          >
             <div>
               <label
                 htmlFor="username"

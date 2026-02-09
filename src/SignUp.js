@@ -35,7 +35,7 @@ function SignUp({ onNavigate, page }) {
         {/* removed duplicate center nav; single right-aligned nav below */}
         <nav className="flex items-center gap-3">
           <div
-            className={`group rounded-3xl shadow-md border border-[#274C77] overflow-hidden min-w-[92px] sm:min-w-[140px] h-10 sm:h-11 transition hover:bg-[#274C77]/50 ${page === "login" ? "bg-[#274C77]/50" : "bg-white"}`}
+            className={`group rounded-3xl shadow-md border border-[#274C77] overflow-hidden min-w-[92px] sm:min-w-[140px] h-10 sm:h-11 transition hover:bg-[#274C77] ${page === "login" ? "bg-[#274C77]" : "bg-white"}`}
           >
             <button
               type="button"
@@ -50,7 +50,7 @@ function SignUp({ onNavigate, page }) {
           </div>
 
           <div
-            className={`group rounded-3xl shadow-md border border-[#274C77] overflow-hidden min-w-[92px] sm:min-w-[140px] h-10 sm:h-11 transition hover:bg-[#274C77]/50 ${page === "signup" ? "bg-[#274C77]/50" : "bg-white"}`}
+            className={`group rounded-3xl shadow-md border border-[#274C77] overflow-hidden min-w-[92px] sm:min-w-[140px] h-10 sm:h-11 transition hover:bg-[#274C77] ${page === "signup" ? "bg-[#274C77]" : "bg-white"}`}
           >
             <button
               type="button"
@@ -65,7 +65,7 @@ function SignUp({ onNavigate, page }) {
           </div>
 
           <div
-            className={`group rounded-3xl shadow-md border border-[#274C77] overflow-hidden min-w-[72px] sm:min-w-[110px] h-10 sm:h-11 transition hover:bg-[#274C77]/50 bg-white`}
+            className={`group rounded-3xl shadow-md border border-[#274C77] overflow-hidden min-w-[72px] sm:min-w-[110px] h-10 sm:h-11 transition hover:bg-[#274C77] bg-white`}
           >
             <a
               href="#about"
@@ -117,7 +117,7 @@ function SignUp({ onNavigate, page }) {
               />
             </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
                 <label className="block text-sm font-medium text-slate-800 mb-1.5">
                   Password
